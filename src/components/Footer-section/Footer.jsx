@@ -100,7 +100,7 @@ const Footer = () => {
                 placeholder="Enter Email..."
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSubmit(e)}
-                className="text-[#090303] text-sm font-[500] p-2 rounded-md focus:outline-none focus:ring"
+                className="text-[#090303] text-sm font-[500] p-2 rounded-md focus:outline-none focus:ring" required
               />
               <button
                 onClick={handleSubmit}
