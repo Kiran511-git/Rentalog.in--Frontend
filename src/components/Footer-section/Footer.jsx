@@ -18,6 +18,15 @@ const Footer = () => {
     } catch (error) {
       console.log(`Error with newsletter input: ${error}`);
     }
+    if ($('#email').val() == '') {
+      this.setError("email", "Please enter your email address");
+      hasErrors = true;
+    } else this.setError("email", null)
+
+    if ($('#email').val() !== /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/) {
+      this.setError("email", "Please enter a valid email address");
+      hasErrors = true;
+    } else this.setError("email", null)
   };
 
   return (
